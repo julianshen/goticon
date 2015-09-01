@@ -97,7 +97,7 @@ func GenerateIdenticon8bits(gender string, data []byte) image.Image {
 		log.Fatal("Unknow gender " + gender)
 	}
 
-	img := image.NewNRGBA(image.Rect(0, 0, IMAGE_WIDTH, IMAGE_WIDTH))
+	img := image.NewRGBA(image.Rect(0, 0, IMAGE_WIDTH, IMAGE_WIDTH))
 	for i, layer_name := range compose_order {
 		layer_sels := assets[layer_name]
 		data := sum[i]
